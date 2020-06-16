@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% include 'classroom/students/_header.html' with active='new' %}
+  <div class="card">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>Complaint Title</th>
+          <th>Department Name</th>
+          <th>Detailed Description</th>
+             <th>Complaint Status</th>
+            <th>pdf</th>
+            <th>Date</th>
+
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for quiz in quizzes %}
+
+          <tr>
+              <td class="align-middle"><b>{{ quiz.name }}</b></td>
+            <td class="align-middle"><b>{{ quiz.subject.get_html_badge }}</td>
+             <td class="align-middle"><b/>{{ quiz.Description }}</a></td>
+              <td class="align-middle"><a href="{% url 'status:quiz_change2' quiz.pk %}"><b style="color:darkblue;">{{ quiz.Status }}</b></a></td>
+                <td class="align-middle" ><a href= "{% url 'students:complain-pdf' quiz.pk %}" ><i style="font-size:30px;color:brown;" class="fa">&#xf15b;</i>
+<td class="align-middle"><b/>{{ quiz.SubmitDate }}</a></td>
+
+             <td class="align-middle"><b/>{{ quiz.text }}</a></td>
+
+  </a> </td>
+            <td class="text-right">
+
+<!--              <a href="{% url 'students:take_quiz' quiz.pk %}" class="btn btn-primary">Start quiz</a>-->
+            </td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td class="bg-light text-center font-italic" colspan="4">No quiz matching your interests right now.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

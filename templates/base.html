@@ -1,0 +1,99 @@
+{% load static %}
+
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Citizen Seva Application{% endblock %}</title>
+    <link rel="icon" href="{% static 'img/citi.jpg' %}">
+    <link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/fontello-2f186091/css/fontello.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+    {% if user.is_authenticated and user.is_teacher %}
+      <link rel="stylesheet" type="text/css" href="{% static 'css/teachers.css' %}">
+    {% else %}
+      <link rel="stylesheet" type="text/css" href="{% static 'css/students.css' %}">
+    {% endif %}
+      <style>
+          .btn-primary{
+          background-color: brown;
+          }
+           .btn-light{
+          background-color: khaki;
+          }
+
+      </style>
+  </head>
+  <body>
+
+
+
+          <div class="row">
+            <div class="col-6">
+
+  <h1 style="color:blue;">
+                <a href="{% url 'home' %}">
+
+             Citizen Seva Application</h1>
+
+                  {% if user.is_authenticated %}
+                    {% if user.is_teacher %}
+                  <img class="main-logo" src="{% static 'img/citi.jpg' %} " style="width:100px;height:50px;" alt="" /></a>
+                      <span  data-toggle="tooltip" data-placement="right" title="Department profile"></span>
+                    {% else %}
+                     <img class="main-logo" src="{% static 'img/citi.jpg' %} " style="width:100px;height:50px;" alt="" /></a>
+                 <span  data-toggle="tooltip" data-placement="right" title="Citizens profile"></span>
+
+                    {% endif %}
+                  {% endif %}
+                </a>
+              </h1>
+            </div>
+
+            <div class="col-6 text-right" >
+              {% if user.is_authenticated %}
+              <p class="pt-3">Logged in as <strong>{{ user.username }}</strong>. <a href="{% url 'logout' %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="background-color:chocolate;color:white;">Log out</button></a>.</p>
+              {% else %}
+<br>
+
+              <a href="{% url 'logout' %}" class="btn btn-light" ><i class="fa fa-fw fa-home"></i> &nbsp;Home</a>&nbsp;&nbsp;
+<a href="{% url 'citizen:about' %}" class="btn btn-primary"><i class='fas fa-book-open'></i>&nbsp; About Us</a>&nbsp;
+
+              <a href="{% url 'citizen:index_contact' %}" class="btn btn-primary"><i class='fas fa-phone-volume'></i> &nbsp;Contact Us</a>&nbsp;
+              <a href="{% url 'citizen:seen' %}" class="btn btn-primary "><i class="fa fa-fw fa-user-tie"></i>&nbsp; Admin</a>&nbsp;
+                <a href="{% url 'login' %}" class="btn btn-primary" role="button"><i class="fa fa-fw fa-users"></i>&nbsp;Log in</a>&nbsp;
+                <a href="{% url 'signup' %}" class="btn btn-primary" role="button"><i class="fa fa-fw fa-users"></i>&nbsp;Sign up</a>&nbsp;
+
+                {% endif %}
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="card-body">
+              {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+                  {{ message }}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endfor %}
+              {% block content %}
+              {% endblock %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      })
+    </script>
+  </body>
+</html>

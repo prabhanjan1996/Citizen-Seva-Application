@@ -1,0 +1,167 @@
+{% load static %}
+<style>
+.space a1 {
+  float: left;
+  display: absolute;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:#ffe680 ;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 13px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+<div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+                <a href="{% static 'index.html' %}"><img class="main-logo" src="{% static  'citi.jpg' %} " style="width:200px;" alt="" /></a>
+                <strong><img src="{% static 'citi.jpg' %}" alt="" /></strong>
+            </div>
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="active">
+                            <a class="has-arrow" href="{% url 'citizen:admin_index' %}">
+								   <i class="fa big-icon fa-home icon-wrap"></i>
+								   <span class="mini-click-non">Home</span>
+								</a>
+                        </li>
+
+                        <li><div class="dropdown">
+                            <a class="has-arrow"  aria-expanded="false">
+                                <i class="fa big-icon fa-user icon-wrap"></i>State Info<span class="mini-click-non"></span></a>
+  <div class="dropdown-content">
+    <a href="{% url 'citizen:create_state' %}">State Details</a>
+    <a href="{% url 'citizen:create_district' %}">District Details</a>
+    <a href="{% url 'citizen:talukacreate' %}">Taluka Details</a>
+      <a href="{% url 'citizen:hobalicreate' %}">Hobali Details</a>
+      <a href="{% url 'citizen:circlecreate' %}">Circle</a>
+      <a href="{% url 'citizen:villagecreate' %}">Village</a>
+
+      <a href="{% url 'citizen:policestationcreate' %}">Police Station</a>
+       <a href="{% url 'citizen:partdetailcreate' %}">Part Details</a>
+
+
+
+  </div>
+</div>
+                        </li>
+
+                         <li><div class="dropdown">
+                            <a class="has-arrow"  aria-expanded="false">
+                                <i class="fa big-icon fa-building icon-wrap"></i>Constituency Info<span class="mini-click-non"></span></a>
+  <div class="dropdown-content">
+    <a href="{% url 'citizen:pollingstationcreate' %}">Polling Booth Details</a>
+    <a href="{% url 'citizen:create_consttype' %}">ConstituencyTypes Details</a>
+    <a href="{% url 'citizen:constituencycreate' %}">Constituency Details</a>
+  </div>
+</div>
+                         </li>
+
+ <li><div class="dropdown">
+                            <a class="has-arrow"  aria-expanded="false">
+                                <i class="fa big-icon fa-user icon-wrap"></i>Party <span class="mini-click-non"></span></a>
+  <div class="dropdown-content">
+    <a href="{% url 'citizen:party' %}">Party</a>
+    <a href="{% url 'citizen:create_partyworkers' %}">Party Workers</a>
+    <a href="{% url 'citizen:create_committeestructure' %}">Committee Structure</a>
+      <a href="{% url 'citizen:create_committee' %}">Committee </a>
+      <a href="{% url 'citizen:create_committeemembers' %}">Committee Members</a>
+  </div>
+</div>
+                        </li>
+                        <li><div class="dropdown">
+                            <a class="has-arrow"  aria-expanded="false">
+                                <i class="fa big-icon fa-users icon-wrap"></i> Members <span class="mini-click-non"></span></a>
+  <div class="dropdown-content">
+    <a href="{% url 'citizen:create_memberstype' %}">Members Type</a>
+    <a href="{% url 'citizen:create_members' %}">Members Details</a>
+
+  </div>
+</div>
+                        </li>
+                        <li><div class="dropdown">
+                            <a class="has-arrow"  aria-expanded="false">
+                                <i class="fa big-icon fa-newspaper-o icon-wrap"></i>Department Details  <span class="mini-click-non"></span></a>
+  <div class="dropdown-content">
+     <a href="{% url 'student_signup' %}" >Departments Details</a>
+    <a href="{% url 'citizen:create_reporterconst' %}">Press Reporter Constituency</a>
+    <a href="{% url 'citizen:create_event' %}">Events</a>
+
+  </div>
+</div>
+                        </li>
+
+<li><div class="dropdown">
+                            <a class="has-arrow"  aria-expanded="false">
+                                <i class="fa big-icon fa-newspaper-o icon-wrap"></i>Press Reporters  <span class="mini-click-non"></span></a>
+  <div class="dropdown-content">
+    <a href="{% url 'citizen:create_reporter' %}">Press Reporters</a>
+    <a href="{% url 'citizen:create_reporterconst' %}">Press Reporter Constituency</a>
+    <a href="{% url 'citizen:create_event' %}">Events</a>
+
+  </div>
+</div>
+                        </li>
+<li>
+                            <a class="has-arrow" href="{% url 'citizen:complaints' %}" aria-expanded="false"><i class="fa big-icon fa-pie-chart icon-wrap"></i> <span class="mini-click-non">View Complaint Detatils</span></a>
+                        </li>
+
+                        <li>
+                            <a class="has-arrow" href="{% url 'citizen:create_project' %}" aria-expanded="false"><i class="fa big-icon fa-pie-chart icon-wrap"></i> <span class="mini-click-non">Projects Detatils</span></a>
+                        </li>
+
+
+
+                         <li>
+                             <div class="space">
+                            <a1 class="has-ar" href="#" ></a1>
+                             </div>
+                        </li>
+
+                         <li>
+                            <a class="has-arrow" href="{% url 'citizen:HomePage' %}" aria-expanded="false"><i class="fa big-icon fa-envelope icon-wrap"></i> <span class="mini-click-non">Send E-mail</span></a>
+                        </li>
+
+ <li>
+     <div class="space">
+                            <a1 class="has-ar" href="#" ></a1>
+    <p class="pt-3"> <a href="{% url 'logout' %}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="background-color:chocolate;color:white;">Log out</button></a>.</p>
+     <a1  href="#" ></a1>
+     <a1 class="has-ar" href="#" ></a1>
+     <a1 class="has-ar" href="#" ></a1>
+     <a1 class="has-ar" href="#" ></a1>
+         </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-8 col-sm-10 col-12">
+      <h2>Sign up as a {{ user_type }}</h2>
+      <form method="post" novalidate>
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success">Sign up</button>
+      </form>
+    </div>
+  </div>
+  <div class = "col-lg-6">
+            {% if users %}
+ <table class="table"  style="width:100%;" border="2" id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true"
+                    data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true"
+                    data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                            data-cookie-id-table="saveId" data-show-export="true"
+                    data-click-to-select="true" data-toolbar="#toolbar" >
+     <thead>
+         <th><center>Name</center></th>
+         <th><center>password</center></th>
+         <th><center>Code</center></th>
+         <th><center>Taluka Name</center></th>
+         <th><center>Edit</center></th>
+         <th><center>Delete</center></th>
+     </thead>
+     <tbody id="myTable">
+     {% for i in  users %}
+     <tr>
+          <td><center>{{i.username}}</center></td>
+         <td><center>{{i.password}}</center></td>
+           </td>
+     </tr>
+     {% endfor %}
+     </tbody>
+ {% endif %}
+ </div>
+{% endblock %}

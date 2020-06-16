@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="70f51881-30bb-4353-9760-62501c7ffa7b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bo4FSVSwa85CBAlZQHx8qAjohX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/citizen/static/img" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\citizen\static\img" />
+      <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\static" />
+      <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\static\img" />
+      <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\classroom\templates" />
+      <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\citizen\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\static" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="70f51881-30bb-4353-9760-62501c7ffa7b" name="Default Changelist" comment="" />
+      <created>1589285008479</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589285008479</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1589911423836">
+      <screen x="0" y="0" width="1280" height="695" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.695@0.0.1280.695" timestamp="1589911423836" />
+    <state x="337" y="171" key="com.intellij.ide.util.TipDialog" timestamp="1592310605031">
+      <screen x="0" y="0" width="1280" height="695" />
+    </state>
+    <state x="337" y="171" key="com.intellij.ide.util.TipDialog/0.0.1280.695@0.0.1280.695" timestamp="1592310605031" />
+  </component>
+</project>

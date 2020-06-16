@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% include
+{% block content %}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">My Grievances</li>
+    </ol>
+  </nav>
+  <h2 class="mb-3">My Grievance</h2>
+  <a href="{% url 'teachers:quiz_add' %}" class="btn btn-primary mb-3" role="button">Add Grievance</a>
+  <div class="card">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th>Grievance</th>
+          <th>Department</th>
+          <th>Description</th>
+<th>Complaint Status</th>
+          <th>Take Print </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for quiz in quizzes %}
+          <tr>
+<!--              <a href="{% url 'teachers:quiz_change' quiz.pk %}">-->
+            <td class="align-middle">{{ quiz.name }}</td>
+            <td class="align-middle">{{ quiz.subject.get_html_badge }}</td>
+            <td class="align-middle">{{ quiz.Description }}</td>
+            <td class="align-middle">{{ quiz.Status }}</td>
+
+              <td class="align-middle" ><a href= "{% url 'teachers:complain-pdf' quiz.pk %}" ><i style="font-size:30px" class="fa">&#xf15b;</i>
+
+  </a> </td>
+
+<!--            <td class="text-right">-->
+<!--              <a href="{% url 'students:quiz_list' %}" class="btn btn-primary">View results</a>-->
+<!--            </td>-->
+          </tr>
+        {% empty %}
+          <tr>
+            <td class="bg-light text-center font-italic" colspan="5">You haven't Registered any Application or complaint .</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h2>Taluka Form edit</h2>
+
+  <form method="post" id="HobaliForm" data-cities-url="{% url 'citizen:ajax_load_Taluka' %}" novalidate>
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit">Save</button>
+    <a href="{% url 'citizen:hobalicreate' %}">Nevermind</a>
+  </form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+   $("#id_State").change(function () {
+      var url = $("#HobaliForms").attr("data-District-url");
+      var StateId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'State': StateId
+        },
+        success: function (data) {
+          $("#id_District").html(data);
+        }
+      });
+
+    });
+ </script>
+      <script>
+    $("#id_District").change(function () {
+      var url = $("#HobaliForms").attr("data-District-url");
+      var DistrictId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'District': DistrictId
+        },
+        success: function (data) {
+          $("#id_Taluka").html(data);
+        }
+      });
+
+    });
+
+
+  </script>
+{% endblock %}

@@ -1,0 +1,23 @@
+
+<option value="">---------</option>
+{% for District in District %}
+<option value="{{ District.id }}">{{ District.Name }}</option>
+{% endfor %}
+
+
+{% for Taluka in Taluka %}
+<option value="{{ Taluka.id }}">{{ Taluka.Name }}</option>
+{% endfor %}
+
+{% for Hobali in Hobali %}
+<option value="{{ Hobali.id }}">{{ Hobali.Name }}</option>
+{% endfor %}
+
+
+{% for Circle in Circle %}
+<option value="{{ Circle.id }}">{{ Circle.Name }}</option>
+{% endfor %}
+
+
+
+

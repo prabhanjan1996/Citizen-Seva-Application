@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page"> Grievances</li>
+
+    </ol>
+  </nav>
+
+  <div class="card">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+            <th>Citizen Name</th>
+          <th>Grievance</th>
+          <th>Department</th>
+          <th>Description</th>
+<th>Complaint Status</th>
+
+          <th>Delete</th>
+            <th></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for quiz in quizzes %}
+          <tr>
+<!--              <a href="{% url 'teachers:quiz_change' quiz.pk %}">-->
+              <td class="align-middle">{{ quiz.owner }}</td>
+            <td class="align-middle">{{ quiz.name }}</td>
+            <td class="align-middle">{{ quiz.subject.get_html_badge }}</td>
+            <td class="align-middle">{{ quiz.Description }}</td>
+            <td class="align-middle">{{ quiz.Status }}</td>
+
+
+
+  </a> </td>
+
+           <td class="text-right">
+          <a class="btn btn-sm btn-danger" href="/citizen/delete_complaints/{{i.id}}">
+                 <i class="fa fa-trash"></i>
+           </td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td class="bg-light text-center font-italic" colspan="5">You haven't Registered any Application or complaint .</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

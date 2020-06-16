@@ -1,0 +1,269 @@
+{% extends 'citizen/base.html' %}
+
+    {% load static %}
+
+
+    <style>
+    .align1{
+    text-align: left;
+    }
+    .align2{
+    text-align: right;
+    }
+    .vertical {
+            border-left: 6px solid black;
+            height: 200px;
+            position:absolute;
+            left: 50%;
+        }
+.button123 {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button124 {
+  background:green ;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+    <meta charset="UTF-8">
+
+
+    <title>Citizen Seva App</title>
+     <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+
+
+
+
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+
+
+<body>
+{% block body %}
+ {% include "citizen/sidebar.html" %}
+
+ <div class="all-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-pro">
+                        <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                        <div class="menu-switcher-pro">
+                                            <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+													<i class="fa fa-bars"></i>
+												</button>
+                                        </div>
+                                    </div>
+                                   <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+                                        <div class="header-top-menu tabl-d-n">
+                                            <ul class="nav navbar-nav mai-top-nav">
+                                                <li class="nav-item"><a href="{% url 'citizen:admin_index' %}" class="nav-link">Home</a>
+                                                </li>
+                                                <li class="nav-item"><a href="{% url 'citizen:admin_index' %}" class="nav-link">Support</a>
+                                                </li>
+                                                <li class="nav-item"><a href="#" class="nav-link">Services</a>
+                                                </li>
+
+
+
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                        <div class="header-right-info">
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                                <li class="nav-item dropdown">
+
+                                                </li>
+                                                <li class="nav-item">
+
+
+                                                <li class="nav-item">
+                                                    <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+															<i class="fa fa-user adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
+															<span class="admin-name">Personal Info</span>
+															<i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
+														</a>
+                                                    <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+
+                                                        <li><a href="#"><span class="fa fa-user author-log-ic"></span>My Profile</a>
+                                                        </li>
+
+                                                        <li><a href="#"><span class="fa fa-cog author-log-ic"></span>Settings</a>
+                                                        </li>
+                                                        <li><p class="pt-3"> <a href="{% url 'logout' %}"><span class="fa fa-lock author-log-ic"></span>Log out</a></p>                                                        </li>
+                                                    </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu start -->
+
+            <!-- Mobile Menu end -->
+            <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="breadcome-list single-page-breadcome">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<br>
+<br>
+<br>
+<div class="container">
+
+    <h3 style="background-color:DodgerBlue;width:15%;" class="card-title">Total Data = {{ counts }}</h3>
+    {% load crispy_forms_tags %}
+    <div class = "row">
+        <div class="col-lg-5">
+            <form method="post" id="TalukaForms" data-District-url="{% url 'citizen:ajax_load_District' %}" novalidate>
+    {% csrf_token %}
+    <table>
+     {{form|crispy}}
+    </table>
+    <button class="button" type="submit"  style="width:15%;background:darkslateblue;color:white;">Save</button>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;
+                 <button class="button1" type="reset" value="Reset" style="width:15%;background:darkslateblue;color:white;">Reset</button>
+
+  </form>
+
+        </div>
+
+        <div class = "col-lg-6">
+            {% if taluks %}
+ <table class="table"  style="width:100%;" border="2" id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true"
+                    data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true"
+                    data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                            data-cookie-id-table="saveId" data-show-export="true"
+                    data-click-to-select="true" data-toolbar="#toolbar" >
+     <thead>
+         <th><center>State</center></th>
+         <th><center>District</center></th>
+         <th><center>Code</center></th>
+         <th><center>Taluka Name</center></th>
+         <th><center>Edit</center></th>
+         <th><center>Delete</center></th>
+     </thead>
+     <tbody id="myTable">
+     {% for i in  taluks %}
+     <tr>
+          <td><center>{{i.State.State}}</center></td>
+         <td><center>{{i.District.Name}}</center></td>
+         <td><center>{{i.Code}}</center></td>
+          <td><center>{{i.Name}}</center></td>
+
+
+         <td><center>
+             <a class="btn btn-sm btn-warning" href="{% url 'citizen:TalukaUpdateView' i.pk %}">
+                 <i class="fa fa-pencil" ></i>
+             </a></center>
+         </td>
+         <td><center>
+              <a class="btn btn-sm btn-danger" href="/citizen/delete_taluka/{{i.id}}">
+                 <i class="fa fa-trash"></i>
+             </a></center>
+         </td>
+     </tr>
+     {% endfor %}
+     </tbody>
+ </table>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $("#id_State").change(function () {
+      var url = $("#TalukaForms").attr("data-District-url");
+      var StateId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'State': StateId
+        },
+        success: function (data) {
+          $("#id_District").html(data);
+        }
+      });
+
+    });
+  </script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</div>
+<br>
+<br>
+<br>
+     <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-copy-right">
+                            <p>Copyright © 2020 <a href="https://www.kletech.ac.in">KLE Tech</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+</body>

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h2>Taluka Form edit</h2>
+
+  <form method="post" id="TalukaForm" data-cities-url="{% url 'ajax_load_District' %}" novalidate>
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit">Save</button>
+    <a href="{% url 'talukacreate' %}">Nevermind</a>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $("#id_State").change(function () {
+      var url = $("#TalukaForm").attr("data-District-url");
+      var StateId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'State': StateId
+        },
+        success: function (data) {
+          $("#id_District").html(data);
+        }
+      });
+
+    });
+
+   </script>
+
+{% endblock %}

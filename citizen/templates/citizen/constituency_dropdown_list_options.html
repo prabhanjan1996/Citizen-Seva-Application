@@ -1,0 +1,5 @@
+
+<option value="">---------</option>
+{% for Constituency in Constituency %}
+<option value="{{ Constituency.pk }}">{{ Constituency.Name }}</option>
+{% endfor %}
