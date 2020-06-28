@@ -21,6 +21,7 @@ from reportlab.lib.units import inch
 
 class TeacherSignUpView(CreateView):
     model = User
+
     form_class = TeacherSignUpForm
     template_name = 'registration/signup_form.html'
 
@@ -292,8 +293,8 @@ def pdf(request, pk):
     textobject = p.beginText()
     textobject.setTextOrigin(100, 525)
     textobject.setFont("Helvetica-Oblique", 14)
-    text = complain.owner.username
-    p.drawCentredString(100, 50, "Date : " + text)
+
+    p.drawCentredString(80, 50, "Date : " )
     p.setFillColorRGB(1, 1, 1)
 
     p.rect(5 * inch, 0.4 * inch, 2.5 * inch, 0.5 * inch, fill=1)  # draw rectangle

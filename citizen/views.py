@@ -632,7 +632,7 @@ def update_memberstype(request, id):
 def delete_memberstype(request, id):
     user = MembersType.objects.get(id=id)
     user.delete()
-    return HttpResponseRedirect(reverse('create_memberstype'))
+    return HttpResponseRedirect(reverse('citizen:create_memberstype'))
 
 
 def create_members(request):
@@ -640,7 +640,7 @@ def create_members(request):
 
     if form.is_valid():
         form.save()
-        return redirect('create_members')
+        return redirect('citizen:create_members')
     return render(request, 'citizen/Members.html',
                   {'form': form, 'Members': Members.objects.all().order_by('FirstName')})
 
@@ -650,7 +650,7 @@ def update_members(request, id):
     form = MembersForms(request.POST or None, instance=id)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect(reverse('create_members'))
+        return HttpResponseRedirect(reverse('citizen:create_members'))
     return render(request, 'citizen/Members.html', {'form': form,
                                                     'Members': Members.objects.all().order_by(
                                                         'FirstName')})
@@ -659,7 +659,7 @@ def update_members(request, id):
 def delete_members(request, id):
     user = Members.objects.get(id=id)
     user.delete()
-    return HttpResponseRedirect(reverse('create_members'))
+    return HttpResponseRedirect(reverse('citizen:create_members'))
 
 
 def load_Constituency(request):
@@ -699,7 +699,7 @@ def create_project(request):
 
     if form.is_valid():
         form.save()
-        return redirect('create_project')
+        return redirect('citizen:create_project')
     return render(request, 'citizen/Projects.html',
                   {'form': form, 'Projects': Projects.objects.all().order_by('Title')})
 
@@ -709,7 +709,7 @@ def update_project(request, id):
     form = ProjectsForms(request.POST or None, instance=id)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect(reverse('create_project'))
+        return HttpResponseRedirect(reverse('citizen:create_project'))
     return render(request, 'citizen/Projects.html', {'form': form,
                                                      'Projects': Projects.objects.all().order_by(
                                                          'Title')})
@@ -718,7 +718,7 @@ def update_project(request, id):
 def delete_project(request, id):
     user = Projects.objects.get(id=id)
     user.delete()
-    return HttpResponseRedirect(reverse('create_project'))
+    return HttpResponseRedirect(reverse('citizen:create_project'))
 
 
 def load_project(request):
@@ -731,7 +731,7 @@ def create_partyworkers(request):
     form = PartyworkersForms(request.POST)
     if form.is_valid():
         form.save()
-        return redirect('create_partyworkers')
+        return redirect('citizen:create_partyworkers')
     return render(request, 'citizen/Partyworkers.html',
                   {'form': form, 'partyworkers': PartyWorkers.objects.all().order_by('Name')})
 
@@ -741,7 +741,7 @@ def update_partyworkers(request, id):
     form = PartyworkersForms(request.POST or None, instance=id)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect(reverse('create_partyworkers'))
+        return HttpResponseRedirect(reverse('citizen:create_partyworkers'))
     return render(request, 'citizen/Partyworkers.html', {'form': form,
                                                          'partyworkers': PartyWorkers.objects.all().order_by(
                                                              'Name')})
@@ -750,7 +750,7 @@ def update_partyworkers(request, id):
 def delete_partyworkers(request, id):
     user = PartyWorkers.objects.get(id=id)
     user.delete()
-    return HttpResponseRedirect(reverse('create_partyworkers'))
+    return HttpResponseRedirect(reverse('citizen:create_partyworkers'))
 
 
 def load_partyworkers(request):
@@ -764,7 +764,7 @@ def create_committeestructure(request):
 
     if form.is_valid():
         form.save()
-        return redirect('create_committeestructure')
+        return redirect('citizen:create_committeestructure')
     return render(request, 'citizen/Committeestructure.html',
                   {'form': form, 'Committestr': CommitteeStructure123.objects.all().order_by('Position')})
 
@@ -774,7 +774,7 @@ def update_committeestructure(request, id):
     form = CommitteeStructureForms(request.POST or None, instance=id)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect(reverse('create_committeestructure'))
+        return HttpResponseRedirect(reverse('citizen:create_committeestructure'))
     return render(request, 'citizen/Committeestructure.html', {'form': form,
                                                                'Committestr': CommitteeStructure123.objects.all()})
 
@@ -782,7 +782,7 @@ def update_committeestructure(request, id):
 def delete_committeestructure(request, id):
     user = CommitteeStructure123.objects.get(id=id)
     user.delete()
-    return HttpResponseRedirect(reverse('create_committeestructure'))
+    return HttpResponseRedirect(reverse('citizen:create_committeestructure'))
 
 
 def create_committee(request):
@@ -790,7 +790,7 @@ def create_committee(request):
 
     if form.is_valid():
         form.save()
-        return redirect('create_committee')
+        return redirect('citizen:create_committee')
     return render(request, 'citizen/Committee.html',
                   {'form': form, 'Committe': Committee123.objects.all().order_by('Name')})
 
@@ -800,7 +800,7 @@ def update_committee(request, id):
     form = CommitteeForms(request.POST or None, instance=id)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect(reverse('create_committee'))
+        return HttpResponseRedirect(reverse('citizen:create_committee'))
     return render(request, 'citizen/Committee.html', {'form': form,
                                                       'Committe': Committee123.objects.all()})
 
@@ -808,7 +808,7 @@ def update_committee(request, id):
 def delete_committee(request, id):
     user = Committee123.objects.get(id=id)
     user.delete()
-    return HttpResponseRedirect(reverse('create_committee'))
+    return HttpResponseRedirect(reverse('citizen:create_committee'))
 
 
 def create_committeemembers(request):
@@ -816,7 +816,7 @@ def create_committeemembers(request):
 
     if form.is_valid():
         form.save()
-        return redirect('create_committeemembers')
+        return redirect('citizen:create_committeemembers')
     return render(request, 'citizen/Committeemembers.html',
                   {'form': form, 'Committemem': CommitteeMembers123.objects.all().order_by('Start_Date')})
 
@@ -826,7 +826,7 @@ def update_committeemembers(request, id):
     form = CommitteeMembersForms(request.POST or None, instance=id)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect(reverse('create_committeemembers'))
+        return HttpResponseRedirect(reverse('citizen:create_committeemembers'))
     return render(request, 'citizen/Committeemembers.html', {'form': form,
                                                              'Committemem': CommitteeMembers123.objects.all()})
 
@@ -834,7 +834,7 @@ def update_committeemembers(request, id):
 def delete_committeemembers(request, id):
     user = CommitteeMembers123.objects.get(id=id)
     user.delete()
-    return HttpResponseRedirect(reverse('create_committeemembers'))
+    return HttpResponseRedirect(reverse('citizen:create_committeemembers'))
 
 
 def complaints(request):
@@ -848,5 +848,5 @@ def complaints(request):
 def delete_complaints(request, id):
     user = Quiz.objects.get(id=id)
     user.delete()
-    return HttpResponseRedirect(reverse('complaints'))
+    return HttpResponseRedirect(reverse('citizen:complaints'))
 

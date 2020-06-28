@@ -2,7 +2,11 @@
 
 {% block content %}
   <h2>Sign up for a free account</h2>
-  <p class="lead">Select below the type of account you want to create</p>
+  <p class="lead">Select below the button to get register to raise common issues facing by citizens . </p>
+<p class="lead">Citizens can get register for register the complaints like street light not working issue, road repair, water problem etc.  </p>
+<p class="lead">Citizen can add title of the grievances, description, select the department and submit your complaint .</p>
 
-  <a href="{% url 'teacher_signup' %}" class="btn btn-teacher btn-lg" role="button">Citizen</a>
-{% endblock %}
+   <div class="col-sm-9 col-md">
+   <a  href="{% url 'teacher_signup' %}" class="btn btn-teacher btn-lg" role="button">Citizen Registration</a>
+</div>
+   {% endblock %}

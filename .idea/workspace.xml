@@ -1,7 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70f51881-30bb-4353-9760-62501c7ffa7b" name="Default Changelist" comment="" />
+    <list default="true" id="70f51881-30bb-4353-9760-62501c7ffa7b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/citizen/migrations/0013_auto_20200626_2032.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/citizen/migrations/0014_auto_20200628_1108.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/citizen/migrations/0015_auto_20200628_1115.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/beach.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/c_data1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/c_data2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/i.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/c_data1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/c_data2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/si.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/portal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/roads.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/si.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/water.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/citizen/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/citizen/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/citizen/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/citizen/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/citizen/templates/citizen/Constituency.html" beforeDir="false" afterPath="$PROJECT_DIR$/citizen/templates/citizen/Constituency.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/citizen/templates/citizen/Partyworkers.html" beforeDir="false" afterPath="$PROJECT_DIR$/citizen/templates/citizen/Partyworkers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/citizen/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/citizen/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classroom/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/classroom/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classroom/templates/classroom/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/classroom/templates/classroom/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classroom/views/teachers.py" beforeDir="false" afterPath="$PROJECT_DIR$/classroom/views/teachers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/water_problem.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/water.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/signup_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/signup_form.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,28 +46,36 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1bo4FSVSwa85CBAlZQHx8qAjohX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/citizen/static/img" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\citizen\static\img" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\static" />
+      <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\citizen\static\img" />
       <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\static\img" />
       <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\classroom\templates" />
       <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\citizen\static" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\DELL-1\Downloads\django-multiple-user-types-example-master\django-multiple-user-types-example-master\django_school\static" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -64,14 +103,17 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="142" y="0" key="SettingsEditor" timestamp="1589911423836">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1592325738766">
       <screen x="0" y="0" width="1280" height="695" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.695@0.0.1280.695" timestamp="1589911423836" />
-    <state x="337" y="171" key="com.intellij.ide.util.TipDialog" timestamp="1592310605031">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.695@0.0.1280.695" timestamp="1592325738766" />
+    <state x="337" y="171" key="com.intellij.ide.util.TipDialog" timestamp="1593181843214">
       <screen x="0" y="0" width="1280" height="695" />
     </state>
-    <state x="337" y="171" key="com.intellij.ide.util.TipDialog/0.0.1280.695@0.0.1280.695" timestamp="1592310605031" />
+    <state x="337" y="171" key="com.intellij.ide.util.TipDialog/0.0.1280.695@0.0.1280.695" timestamp="1593181843214" />
   </component>
 </project>

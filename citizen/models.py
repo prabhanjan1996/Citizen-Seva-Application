@@ -254,7 +254,7 @@ class PartyWorkers(models.Model):
     Members = models.ForeignKey('Members', on_delete=models.CASCADE)
 
     PollingStation = models.ForeignKey('PollingStation', on_delete=models.CASCADE)
-    Party = models.ForeignKey('Party', on_delete=models.CASCADE)
+    Party123 = models.ForeignKey('Party123', on_delete=models.CASCADE )
     Name = models.CharField(max_length=200)
     Address = models.CharField(max_length=200)
     City = models.CharField(max_length=200)
@@ -263,7 +263,7 @@ class PartyWorkers(models.Model):
     Status = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.Name
+        return self.Mobile
 
 
 class Members(models.Model):
@@ -482,8 +482,8 @@ class Party123(models.Model):
     ShortName = models.CharField(max_length=200)
     SignName = models.CharField(max_length=200)
 
-    def str(self):
-        self.Name
+    def __str__(self):
+        return self.Name
 
 
 class Event(models.Model):

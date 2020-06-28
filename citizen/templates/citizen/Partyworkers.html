@@ -688,7 +688,7 @@ $(document).ready(function(){
         </div>
 
         <div class = "col-lg-6">
-            {% if partyworker %}
+            {% if partyworkers %}
  <table class="table"  style="width:100%;" border="2" id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true"
                     data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true"
                     data-show-toggle="true" data-resizable="true" data-cookie="true"
@@ -696,35 +696,35 @@ $(document).ready(function(){
                     data-click-to-select="true" data-toolbar="#toolbar" >
      <thead>
          <th><center>Constituency</center></th>
-         <th><center>Member</center></th>
-         <th><center>Member Lastname</center></th>
-         <th><center>Title</center></th>
+         <th><center>Name</center></th>
+         <th><center>City</center></th>
+
           <th><center>Status</center></th>
-          <th><center>Year of approval</center></th>
+          <th><center>Address</center></th>
 
          <th><center>Edit</center></th>
          <th><center>Delete</center></th>
      </thead>
      <tbody id="myTable">
-     {% for i in  partyworker %}
+     {% for i in  partyworkers %}
      <tr>
-
-         <td><center>{{i.Members.FirstName}}</center>
-          <td><center>{{i.Members.LastName}}</center></td>
-         <td><center>{{i.Name}}</center></td>
-
+<td><center>{{i.Constituency}}</center>
+         <td><center>{{i.Name}}</center>
+          <td><center>{{i.City}}</center></td>
+         <td><center>{{i.Status}}</center></td>
+<td><center>{{i.Address}}</center></td>
 
 
 
 
 
          <td><center>
-             <a class="btn btn-sm btn-warning" href="/update_project/{{i.id}}">
+             <a class="btn btn-sm btn-warning" href="/citizen/update_partyworkers/{{i.id}}">
                  <i class="fa fa-pencil" ></i>
              </a></center>
          </td>
          <td><center>
-              <a class="btn btn-sm btn-danger" href="/delete_project/{{i.id}}">
+              <a class="btn btn-sm btn-danger" href="/citizen/delete_partyworkers/{{i.id}}">
                  <i class="fa fa-trash"></i>
              </a></center>
          </td>

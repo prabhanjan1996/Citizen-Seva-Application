@@ -508,7 +508,7 @@ class PartyForms(forms.ModelForm):
 class PartyworkersForms(forms.ModelForm):
     class Meta:
         model = PartyWorkers
-        fields = ('Name', 'City', 'Address', 'Status', 'Mobile', 'Email', 'Members', 'PollingStation')
+        fields = ('Name', 'City', 'Address', 'Status', 'Mobile', 'Email', 'Constituency','Members', 'PollingStation','Party123')
 
 
 class MembersTypeForms(forms.ModelForm):
